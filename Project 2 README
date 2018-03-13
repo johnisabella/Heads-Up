@@ -1,0 +1,28 @@
+# Project Name: Head's Up
+
+## Description
+Our app allows school districts to send mass messages to students and parents about school-related emergencies, closures, etc.
+
+## Key Features
+Key features go here...
+
+## Tech Used
+HTML5, CSS, Javascript, MySQL, Node.js, Twilio
+
+## Architecture Diagram
+Cool architecture picture goes here...
+
+# UI Mockups
+Mockup pictures go here...
+
+## API Docs
+Description of API and routes goes here...
+
+## DB
+ERD Diagram and or schema goes here.
+
+## Getting Started
+Instructions for installing, running tests, seeding the DB, setting up the config file goes here
+
+## Team Members
+Pictures and descriptions go here :)
