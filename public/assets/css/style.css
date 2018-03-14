@@ -1,0 +1,17 @@
+#SchoolLogo {
+  text-align: center;
+  background-color: #eee;
+  height: 150px;
+  width: 100%;
+}
+#CurrentAlertMessage {
+  height: 200px;
+}
+.container {
+}
+button {
+  margin-top: 40px;
+}
+.card {
+  margin-top: 10px;
+}
