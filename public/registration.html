@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title></title>
+  </head>
+  <body>
+    <div id="SchoolLogo">
+      <h1>School System Logo + Name</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="card">
+            <div class="card-header">
+              <h4>Subscriber Information</h4>
+            </div><!-- End of card-header -->
+            <div class="card-body">
+              <div class="form-row">
+                <div class="col-12">
+                  <label for="Firstname">First name</label>
+                  <input type="text" class="form-control" id="Firstname">
+                </div>
+                <div class="col-12">
+                  <label for="Lastname">Last name</label>
+                  <input type="text" class="form-control" id="Lastname">
+                </div>
+                <div class="col-12">
+                  <label for="TelephoneNumber">Telephone Number</label>
+                  <input type="text" class="form-control" id="TelephoneNumber">
+                </div>
+              </div><!--End of form-row-->
+            </div><!-- End of card-body-->
+          </div><!-- End of card -->
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="Submit">Submit</button>
+        </div><!-- End of col-8 -->
+
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header">
+              <h4>Relationship to Student</h4>
+            </div><!-- End of card-header-->
+            <div class="card-body">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="Parent" value="Parent" checked>
+                <label class="form-check-label" for="Parent">
+                  Parent
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="LegalGuardian" value="Legal Guardian">
+                <label class="form-check-label" for="Legal Guardian">
+                  Legal Guardian
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="Student" value="Student">
+                <label class="form-check-label" for="Student">
+                  Student
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="Other" value="Other">
+                <label class="form-check-label" for="Other">
+                  Other
+                </label>
+              </div>
+            </div><!-- End of card-body-->
+          </div><!-- End of card-->
+
+          <div class="card">
+            <div class="card-header">
+              <h4>Message Type</h4>
+            </div><!-- End of card-header-->
+            <div class="card-body">
+              <div class="form-check form-check">
+                <input class="form-check-input" type="checkbox" id="EmergencyAlerts" value="0">
+                <label class="form-check-label" for="Emergencies">Emergency Alerts</label>
+              </div>
+              <div class="form-check form-check">
+                <input class="form-check-input" type="checkbox" id="CampusNewsAlerts" value="0">
+                <label class="form-check-label" for="News">Campus News Alerts</label>
+              </div>
+              <div class="form-check form-check">
+                <input class="form-check-input" type="checkbox" id="AreaNewsAlerts" value="0">
+                <label class="form-check-label" for="Reminders">Area News Alerts</label>
+              </div>
+              <div class="form-check form-check">
+                <input class="form-check-input" type="checkbox" id="SchoolClosureAlerts" value="0">
+                <label class="form-check-label" for="School Closures">School Closure Alerts</label>
+              </div>
+            </div><!-- End of card-body-->
+          </div><!-- End of card-->
+
+        </div><!-- End of col-4 -->
+      </div><!--End of row -->
+
+      <div class="card">
+        <div class="card-header">
+          <h4>Message Type Description</h4>
+        </div>
+        <div class="card-body">
+          <h5>Emergency Alerts:</h5>
+          <p>Notifications for shelter-in-place, lockdown or evacuations impacting the students and faculty on or near campus.</p>
+          <h5>Campus News Alerts:</h5>
+          <p>Information regarding events being held on or around the campus for students, faculty or visitors.</p>
+          <h5>Area News Alerts:</h5>
+          <p>Information regarding local events being held near you.</p>
+          <h5>School Closure Alerts:</h5>
+          <p>Notifications regarding school closure or late arrival due to inclement weather or environmental issues affecting the school campus.</p>
+        </div>
+      </div>
+
+    </div><!--End of container -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </body>
+</html>
