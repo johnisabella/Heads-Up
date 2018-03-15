@@ -1,34 +1,64 @@
-$("#Submit").click(function() {
-  console.log("Hello");
-  console.log($("#Firstname").val());
-  console.log($("#Lastname").val());
-  console.log($("#TelephoneNumber").val());
+$("#Submit").click(function(event) {
+  event.preventDefault();
+
+  //variables to hold initial data
+
+  Relationship = "";
+  EmergencyAlerts = "0";
+  CampusNewsAlerts = "0";
+  AreaNewsAlerts = "0";
+  SchoolClosureAlerts = "0";
+
+  //verify if boxes are checked
+
   if ($("#Parent").is(':checked')){
-      console.log("Parent is checked");
+      Relationship = "Parent";
   };
   if ($("#LegalGuardian").is(':checked')) {
-      console.log("LegalGuardian is checked");
+      Relationship = "LegalGuardian";
   };
   if ($("#Student").is(':checked')){
-      console.log("Student is checked");
+      Relationship = "Student";
   };
   if ($("#Other").is(':checked')){
-      console.log("Other is checked");
+      Relationship = "Other";
   };
   if ($("#EmergencyAlerts").is(':checked')){
-      console.log("EmergencyAlerts is checked");
+      EmergencyAlerts = "1";
   };
   if ($("#CampusNewsAlerts").is(':checked')){
-      console.log("#CampusNewsAlerts is checked");
+      CampusNewsAlerts = "1";
   };
   if ($("#AreaNewsAlerts").is(':checked')){
-      console.log("AreaNewsAlerts is checked");
+      AreaNewsAlerts = "1";
   };
   if ($("#SchoolClosureAlerts").is(':checked')){
-      console.log("SchoolClosureAlerts is checked");
+      SchoolClosureAlerts = "1";
   };
+
+  // Create new variable/object to be later posted to api
+
+  var newSubscriber = {
+    Firstname: $("#Firstname").val().trim(),
+    Lastname: $("#Lastname").val().trim(),
+    TelephoneNumber: $("#TelephoneNumber").val().trim(),
+    Relationship: Relationship,
+    EmergencyAlerts: EmergencyAlerts,
+    CampusNewsAlerts: CampusNewsAlerts,
+    AreaNewsAlerts: AreaNewsAlerts,
+    SchoolClosureAlerts: SchoolClosureAlerts,
+  };
+
+  // Post variable/object to API to save to database
+
+  $.post("/api/newSubscriber", newSubscriber)
+    // on success, run this callback
+    .then(function(data) {
+      // log the data we found
+      //console.log(data);
+    });
   location.reload();
-});//End of click function
+});
 
 $("#alertmessagedropdown").change(function() {
   console.log($("#alertmessagedropdown option:selected").text());

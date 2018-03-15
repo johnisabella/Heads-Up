@@ -17,26 +17,26 @@ module.exports = function(sequelize, DataTypes) {
     },//End of TelephoneNumber
 
     Relationship: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     },//End of Relationship
 
-    Emergency: {
-      type: DataTypes.BOOLEAN,
+    EmergencyAlerts: {
+      type: DataTypes.STRING,
       defaultValue: false
     },//End of Emergency
 
-    News: {
-      type: DataTypes.BOOLEAN,
+    CampusNewsAlerts: {
+      type: DataTypes.STRING,
       defaultValue: false
     },//End of News
 
-    Reminders: {
-      type: DataTypes.BOOLEAN,
+    AreaNewsAlerts: {
+      type: DataTypes.STRING,
       defaultValue: false
     },//End of Reminders
 
-    SchoolClosures: {
-      type: DataTypes.BOOLEAN,
+    SchoolClosureAlerts: {
+      type: DataTypes.STRING,
       defaultValue: false
     }
   });//End of variable Subscribers
