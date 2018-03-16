@@ -19,7 +19,7 @@ button {
 .homepageMain {
   font-family: 'Syncopate', sans-serif;
   text-align: center;
-  padding: 30px;
+  padding: 1%;
 }
 
 .homepageMain img {
@@ -30,19 +30,18 @@ button {
 
 .card {
   background-color: #e6eaf2;
-  padding: 3%;
-  padding-bottom: 2%;
+  padding: 2%;
 }
 
 .card-deck {
-  width: 45%;
+  width: 50%;
   margin: auto;
   text-align: center;
-  margin-bottom: 2%;
 }
 
 .card-img-top {
-  width: 80%;
+  width: 70%;
+  height: auto;
   margin: auto;
   margin-top: 3%;
 }
