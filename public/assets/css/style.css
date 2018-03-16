@@ -23,7 +23,7 @@ button {
 }
 
 .homepageMain img {
-  width: 13%;
+  width: 15%;
   height: auto;
   padding: 10px;
 }
@@ -44,4 +44,28 @@ button {
   height: auto;
   margin: auto;
   margin-top: 3%;
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    font-size: 80%;
+    margin: 4%;
+  }
+  .card h5 {
+    font-size: 120%;
+    font-weight: bold;
+  }
+  .homepageMain h1 {
+    font-size: 120%;
+  }
+  .homepageMain h5 {
+    font-size: 90%;
+  }
+  .homepageMain img {
+    width: 40%;
+    height: auto;
+  }
+  .btn {
+    font-size: 90%;
+  }
 }
