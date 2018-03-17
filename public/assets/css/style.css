@@ -46,6 +46,25 @@ button {
   margin-top: 3%;
 }
 
+/*Admin Page Styling*/
+.adminForm {
+  background-color: #e6eaf2;
+  padding: 2%;
+  border: 1px solid gray;
+  margin-top: 2%;
+}
+
+#CurrentAlertMessage {
+  background-color: white;
+  padding: 1%;
+}
+
+p1 {
+  color: gray;
+  font-style: italic;
+}
+
+/*Home Page Media Queries */
 @media only screen and (max-width: 770px) {
   .card {
     font-size: 80%;
@@ -68,4 +87,3 @@ button {
   .btn {
     font-size: 90%;
   }
-}
