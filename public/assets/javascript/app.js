@@ -63,3 +63,9 @@ $("#finalRegistrationSubmit").click(function(event) {
 $("#alertmessagedropdown").change(function() {
   console.log($("#alertmessagedropdown option:selected").text());
 });//End of alertmessagedropdown
+
+$("#finalizeMessageButtonModal").click(function(event) {
+  var r= $('<button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#sendMessageModal">Send Message</button>');
+  $("#finalizeMessageButton").replaceWith(r);
+  $('#confirmMessageModal').hide();
+});

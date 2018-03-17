@@ -4,25 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Alert Messages</title>
+	   <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+     <link rel="shortcut icon" type="image/png" href="./assets/img/HeadsUpFavicon.png">
+    <title>Heads Up: Send Message</title>
   </head>
   <body>
-    <div id="SchoolLogo">
-      <h1>School System Logo + Name</h1>
+
+    <div class = "homepageMain">
+    <img src="./assets/img/HeadsupLogo.png" alt="HeadsupLogo">
+    <h1> Heads Up </h1>
+    <h5> In the loop. Peace of Mind.<h5>
     </div>
+
+
     <div class="container">
+      <div class="adminForm">
       <div class="row">
         <div class="col-6">
           <form>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Alert Messages</label>
+              <label for="exampleFormControlSelect1">Select Message Type</label>
               <select class="form-control" id="alertmessagedropdown">
-                <option>Select Message</option>
+                <option>Custom Message</option>
                 <option value="Emergency Alerts">Emergency Alerts</option>
-                <option value="CampusNewsAlerts">CampusNewsAlerts</option>
-                <option value="AreaNewsAlerts">AreaNewsAlerts</option>
-                <option value="SchoolClosureAlerts">SchoolClosureAlerts</option>
+                <option value="CampusNewsAlerts">Campus News Alerts</option>
+                <option value="AreaNewsAlerts">Area News Alerts</option>
+                <option value="SchoolClosureAlerts">School Closure Alerts</option>
               </select>
             </div>
           </form><!--End of form-->
@@ -31,16 +39,60 @@
 
       <div class="row">
         <div class="col">
-          <div class="card">
-            <div class="card-body" id="CurrentAlertMessage">
-              Message Language
-            </div>
-          </div><!--End of card -->
 
-            <button type="button" class="btn btn-primary btn-lg btn-block">Update Alert Message</button>
+            <div class="card-body" id="CurrentAlertMessage">
+              <p1>Edit Message Text Here</p1>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="finalizeMessageButton" data-toggle="modal" data-target="#confirmMessageModal">Finalize Message Content</button>
+            <div class="sendButtonHere">
+            </div>
+
+<!--Modal to Confirm Message Content-->
+<div class="modal fade" id="confirmMessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message Content Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Click below to finalize the content of your message.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="finalizeMessageButtonModal">Finalize</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal to Confirm Message Distribution-->
+<div class="modal fade" id="sendMessageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Message Distribution Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to send this message?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="finalizeMessageButton">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         </div><!--End of col-->
       </div><!--End of row-->
+    </div><!--End of adminForm container -->
     </div><!--End of container -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
