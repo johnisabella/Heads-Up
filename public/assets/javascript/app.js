@@ -1,4 +1,4 @@
-$("#Submit").click(function(event) {
+$("#finalRegistrationSubmit").click(function(event) {
   event.preventDefault();
 
   //variables to hold initial data
