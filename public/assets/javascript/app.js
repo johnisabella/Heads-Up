@@ -61,11 +61,55 @@ $("#finalRegistrationSubmit").click(function(event) {
 });
 
 $("#alertmessagedropdown").change(function() {
-  console.log($("#alertmessagedropdown option:selected").text());
+  id = (document.getElementById("alertmessagedropdown").value);
+
+  $.get("/api/message/" + id, function(data) {
+    $("#CurrentAlertMessage").empty();
+    $("#CurrentAlertMessage").append(data.Message);
+  });
+
 });//End of alertmessagedropdown
 
 $("#finalizeMessageButtonModal").click(function(event) {
+  //variable/object containing id and message to update the mySQL database through the post AJAX and API
+  var update = {
+    id: document.getElementById("alertmessagedropdown").value,
+    Message: $("#CurrentAlertMessage").val()
+  };
+  //Execute the updateText function passing the variable/object update
+  updateText(update);
+  //Function updateTest, using AJAX/API we will update the messages_tbl table with the data from update variable/object
+  function updateText() {
+    $.ajax({
+      method: "PUT",
+      url: "/api/message",
+      data: update
+    })
+      .then(function() {
+        console.log("message has been updated");
+      });
+  }
+
   var r= $('<button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#sendMessageModal">Send Message</button>');
   $("#finalizeMessageButton").replaceWith(r);
   $('#confirmMessageModal').hide();
+});
+
+$("#sendMessageModal").click(function(event) {
+  var alertData = {
+    id: document.getElementById("alertmessagedropdown").value,
+    Message: $("#CurrentAlertMessage").val()
+  };
+  alert(alertData);
+  function alert(){
+    $.ajax({
+      method: "POST",
+      url: "/api/alerts",
+      data: alertData
+    })
+      .then(function() {
+      });
+    location.reload();
+    console.log("sendMessageModal is executed");
+  };
 });

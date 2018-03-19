@@ -27,10 +27,10 @@
               <label for="exampleFormControlSelect1">Select Message Type</label>
               <select class="form-control" id="alertmessagedropdown">
                 <option>Custom Message</option>
-                <option value="Emergency Alerts">Emergency Alerts</option>
-                <option value="CampusNewsAlerts">Campus News Alerts</option>
-                <option value="AreaNewsAlerts">Area News Alerts</option>
-                <option value="SchoolClosureAlerts">School Closure Alerts</option>
+                <option value="1">Emergency Alerts</option>
+                <option value="2">Campus News Alerts</option>
+                <option value="3">Area News Alerts</option>
+                <option value="4">School Closure Alerts</option>
               </select>
             </div>
           </form><!--End of form-->
@@ -39,9 +39,11 @@
 
       <div class="row">
         <div class="col">
-
-            <div class="card-body" id="CurrentAlertMessage">
-              <p1>Edit Message Text Here</p1>
+            <div class="card-body" id="AlertMessage">
+              <div class="form-group">
+                <label for="CurrentAlertMessage">Edit Message Text Here</label>
+                <textarea class="form-control" id="CurrentAlertMessage" rows="3"></textarea>
+              </div>
             </div>
 
             <button type="button" class="btn btn-primary btn-lg btn-block" id="finalizeMessageButton" data-toggle="modal" data-target="#confirmMessageModal">Finalize Message Content</button>
