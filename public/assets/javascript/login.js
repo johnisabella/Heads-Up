@@ -33,6 +33,7 @@ $("#adminLoginSubmit").click(function(event) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
+    window.alert("Your login credentials were not found. Please try again.");
     // ...
 });
 });
