@@ -47,12 +47,12 @@ button {
 }
 
 /*Admin Page Styling*/
-.adminForm {
+/* .adminForm {
   background-color: #e6eaf2;
   padding: 2%;
   border: 1px solid gray;
   margin-top: 2%;
-}
+} */
 
 #CurrentAlertMessage {
   background-color: white;

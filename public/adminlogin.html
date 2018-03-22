@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/HeadsUpFavicon.png">
     <title></title>
   </head>
   <body>
 
-    <div class="container">
+    <nav class="navbar navbar-dark bg-dark navbar-expand sticky-top justify-content-center">
+      <a class="navbar-brand" href="index.html">
+        <img src="./assets/img/HeadsupLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Authorization
+      </a>
+    </nav>
+    <div class="row">
+      <div class="col-md text-center">
+        <br>
+        <h5>Use the credentials provided to you by your school system.</h5>
+            <hr class=col-4>
+      </div>
+    </div>
+    <div class="container justify-content-center">
       <div class="row">
-        <div class="col-8">
+        <div class="offset-2 col-8 justify-content-center">
           <div class="card">
             <div class="card-header">
               <h4>Administrator Login</h4>
@@ -27,6 +42,7 @@
                   <input type="password" class="form-control" id="admin-password">
                 </div>
               <!-- An element to toggle between password visibility -->
+              <br>
               <input type="checkbox" onclick="myFunction()">Show Password
               </div><!--End of form-row-->
             </div><!-- End of card-body-->
