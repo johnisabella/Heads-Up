@@ -54,8 +54,6 @@ $("#finalRegistrationSubmit").click(function(event) {
   $.post("/api/newSubscriber", newSubscriber)
     // on success, run this callback
     .then(function(data) {
-      // log the data we found
-      //console.log(data);
     });
   location.reload();
 });
@@ -110,6 +108,6 @@ $("#sendMessageModal").click(function(event) {
       .then(function() {
       });
     location.reload();
-    console.log("sendMessageModal is executed");
+    //console.log("sendMessageModal is executed");
   };
 });
