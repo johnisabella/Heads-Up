@@ -1,149 +1,281 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <title></title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+   <link rel="shortcut icon" type="image/png" href="./assets/img/HeadsUpFavicon.png">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+  <title>Head's Up Subscriber</title>
+</head>
   <body>
-    <div id="SchoolLogo">
-      <h1>School System Logo + Name</h1>
+<nav class="navbar navbar-dark bg-dark navbar-expand sticky-top justify-content-center">
+  <a class="navbar-brand" href="index.html">
+    <img src="assets/img/HeadsupLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Head's Up Subscribers
+  </a>
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="assets/img/carousel1.png" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>HEAD'S UP</h1>
+          <h4><i><i class="fas fa-user-plus"></i> Sign Up</i></h4>
+          <br>
+          <br>
+          <!-- <p>...</p> -->
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="assets/img/carousel2.png" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>In The Loop</h1>
+        <h4><i><i class="fas fa-exclamation-triangle"></i> Be Aware</i></h4>
+        <br>
+        <br>
+        <!-- <p>...</p> -->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="assets/img/carousel3.png" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Peace of Mind</h1>
+        <h4><i><i class="fas fa-comment-alt"></i> Receive Alerts</i></h4>
+        <br>
+        <br>
+        <!-- <p>...</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+      <form class="col-8 offset-2">
+        <h2>Subscriber Information</h2>
+        <hr>
+        <p><b>Details:</b> The school system has implemented <i>Heads Up</i> to keep parents, legal guardians, and students in the loop for peace of mind.</p>
+        <p>Please <b>fill out the form below</b> to officially subscribe to text message alerts from the school.</p>
+        <hr>
+        <div class="form-group">
+          <label for="Firstname">First name</label>
+          <input type="text" class="form-control" id="Firstname">
+        </div>
+        <div class="form-group">
+          <label for="Lastname">Last name</label>
+          <input type="text" class="form-control" id="Lastname">
+        </div>
+        <div class="form-group">
+          <label for="TelephoneNumber">Telephone Number</label>
+          <input type="text" class="form-control" id="TelephoneNumber">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Relationship to Student</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Parent</option>
+            <option>Legal Guardian</option>
+            <option>Student</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Message Type | Descriptions <i class="fas fa-info-circle" data-toggle="modal" data-target="#messageModal"></i></label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>Emergency Alerts</option>
+            <option>Campus News Alerts</option>
+            <option>Area News Alerts</option>
+            <option>School Closure Alerts</option>
+          </select>
+
+        </div>
+      </form>
+
+
+
+<!-- OLD FORM INFO FOR RELATIONSHIP AND MESSAGE TYPE.
+
+<div class="col-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>Relationship to Student</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="Parent" value="Parent" checked>
+        <label class="form-check-label" for="Parent">
+          Parent
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="LegalGuardian" value="Legal Guardian">
+        <label class="form-check-label" for="Legal Guardian">
+          Legal Guardian
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="Student" value="Student">
+        <label class="form-check-label" for="Student">
+          Student
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="Other" value="Other">
+        <label class="form-check-label" for="Other">
+          Other
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Message Type</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-check form-check">
+        <input class="form-check-input" type="checkbox" id="EmergencyAlerts" value="0">
+        <label class="form-check-label" for="Emergencies">Emergency Alerts</label>
+      </div>
+      <div class="form-check form-check">
+        <input class="form-check-input" type="checkbox" id="CampusNewsAlerts" value="0">
+        <label class="form-check-label" for="News">Campus News Alerts</label>
+      </div>
+      <div class="form-check form-check">
+        <input class="form-check-input" type="checkbox" id="AreaNewsAlerts" value="0">
+        <label class="form-check-label" for="Reminders">Area News Alerts</label>
+      </div>
+      <div class="form-check form-check">
+        <input class="form-check-input" type="checkbox" id="SchoolClosureAlerts" value="0">
+        <label class="form-check-label" for="School Closures">School Closure Alerts</label>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+END OF OLD FORM INFO FOR RELATIONSHIP AND MESSAGE TYPE. -->
+
+    </div>
+    <hr class="col-8">
+    <div class="container col-8">
+      <div class="row">
+        <div class="col-10">
+          <div class="well">
+            <p><i>By submitting your name and phone number, you are permitting Heads Up to send you text message alerts based on your subscriptions.</i></p>
+          </div>
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary btn-lg" id="Submit" data-toggle="modal" data-target="#registrationModal">Submit</button>
+</div>
+
+</div>
+        </div>
+        <!--Modal for User Registration Confirmation-->
+        <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registration Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Are you ready to submit your request for school-wide notifications?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                <button type="button" class="btn btn-primary" id="finalRegistrationSubmit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <div class="card">
-            <div class="card-header">
-              <h4>Subscriber Information</h4>
-            </div><!-- End of card-header -->
-            <div class="card-body">
-              <div class="form-row">
-                <div class="col-12">
-                  <label for="Firstname">First name</label>
-                  <input type="text" class="form-control" id="Firstname">
-                </div>
-                <div class="col-12">
-                  <label for="Lastname">Last name</label>
-                  <input type="text" class="form-control" id="Lastname">
-                </div>
-                <div class="col-12">
-                  <label for="TelephoneNumber">Telephone Number</label>
-                  <input type="text" class="form-control" id="TelephoneNumber">
-                </div>
-              </div><!--End of form-row-->
-            </div><!-- End of card-body-->
-          </div><!-- End of card -->
-          <button type="submit" class="btn btn-primary btn-lg btn-block" id="Submit" data-toggle="modal" data-target="#registrationModal">Submit</button>
-        </div><!-- End of col-8 -->
-
-<!--Modal for User Registration Confirmation-->
-<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registration Confirmation</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Are you ready to submit your request for school-wide notifications?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
-        <button type="button" class="btn btn-primary" id="finalRegistrationSubmit">Submit</button>
+    <!--Modal for Message Types-->
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content col-12">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Message Type Descriptions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Alert</th>
+      <th scope="col">Text Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><h5>Emergency:</h5></th>
+      <td><p>Notifications for shelter-in-place, lockdown or evacuations impacting the students and faculty on or near campus.</p></td>
+    </tr>
+    <tr>
+      <th scope="row"><h5>Campus News:</h5></th>
+      <td><p>Information regarding events being held on or around the campus for students, faculty or visitors.</p></td>
+    </tr>
+    <tr>
+      <th scope="row"><h5>Area News:</h5></th>
+      <td><p>Information regarding local events being held near you.</p></td>
+    </tr>
+    <tr>
+      <th scope="row"><h5>School Closure:</h5></th>
+      <td><p>Notifications regarding school closure or late arrival due to inclement weather or environmental issues affecting the school campus.</p></td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+    <!-- <h1>Parent registration</h1> -->
 
-        <div class="col-4">
-          <div class="card">
-            <div class="card-header">
-              <h4>Relationship to Student</h4>
-            </div><!-- End of card-header-->
-            <div class="card-body">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="Parent" value="Parent" checked>
-                <label class="form-check-label" for="Parent">
-                  Parent
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="LegalGuardian" value="Legal Guardian">
-                <label class="form-check-label" for="Legal Guardian">
-                  Legal Guardian
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="Student" value="Student">
-                <label class="form-check-label" for="Student">
-                  Student
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="Other" value="Other">
-                <label class="form-check-label" for="Other">
-                  Other
-                </label>
-              </div>
-            </div><!-- End of card-body-->
-          </div><!-- End of card-->
-
-          <div class="card">
-            <div class="card-header">
-              <h4>Message Type</h4>
-            </div><!-- End of card-header-->
-            <div class="card-body">
-              <div class="form-check form-check">
-                <input class="form-check-input" type="checkbox" id="EmergencyAlerts" value="0">
-                <label class="form-check-label" for="Emergencies">Emergency Alerts</label>
-              </div>
-              <div class="form-check form-check">
-                <input class="form-check-input" type="checkbox" id="CampusNewsAlerts" value="0">
-                <label class="form-check-label" for="News">Campus News Alerts</label>
-              </div>
-              <div class="form-check form-check">
-                <input class="form-check-input" type="checkbox" id="AreaNewsAlerts" value="0">
-                <label class="form-check-label" for="Reminders">Area News Alerts</label>
-              </div>
-              <div class="form-check form-check">
-                <input class="form-check-input" type="checkbox" id="SchoolClosureAlerts" value="0">
-                <label class="form-check-label" for="School Closures">School Closure Alerts</label>
-              </div>
-            </div><!-- End of card-body-->
-          </div><!-- End of card-->
-
-        </div><!-- End of col-4 -->
-      </div><!--End of row -->
-
-      <div class="card">
-        <div class="card-header">
-          <h4>Message Type Description</h4>
-        </div>
-        <div class="card-body">
-          <h5>Emergency Alerts:</h5>
-          <p>Notifications for shelter-in-place, lockdown or evacuations impacting the students and faculty on or near campus.</p>
-          <h5>Campus News Alerts:</h5>
-          <p>Information regarding events being held on or around the campus for students, faculty or visitors.</p>
-          <h5>Area News Alerts:</h5>
-          <p>Information regarding local events being held near you.</p>
-          <h5>School Closure Alerts:</h5>
-          <p>Notifications regarding school closure or late arrival due to inclement weather or environmental issues affecting the school campus.</p>
-        </div>
-      </div>
-
-    </div><!--End of container -->
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
+<br>
+<footer>
+  <br>
+    <ul class="nav navbar-dark bg-dark justify-content-center">
+      <br>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/cpocai">Cesar Pocai</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/johnisabella">John Isabella</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/Glouis86">Gerard Louis</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/cmjezior">Chris Jezior</a>
+    </li>
+  </ul>
+  <div class="row">
+
+  </div>
+</footer>
+
 </html>
