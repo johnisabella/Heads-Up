@@ -3,38 +3,26 @@ $("#finalRegistrationSubmit").click(function(event) {
 
   //variables to hold initial data
 
-  Relationship = "";
+  Relationship = (document.getElementById("RelationshiptoStudent").value);
+  AlertType = (document.getElementById("AlertFormControlSelect").value);
   EmergencyAlerts = "0";
   CampusNewsAlerts = "0";
   AreaNewsAlerts = "0";
   SchoolClosureAlerts = "0";
 
-  //verify if boxes are checked
-
-  if ($("#Parent").is(':selected')){
-      Relationship = "Parent";
-  };
-  if ($("#LegalGuardian").is(':selected')) {
-      Relationship = "LegalGuardian";
-  };
-  if ($("#Student").is(':selected')){
-      Relationship = "Student";
-  };
-  if ($("#Other").is(':selected')){
-      Relationship = "Other";
-  };
-  if ($("#EmergencyAlerts").is(':selected')){
-      EmergencyAlerts = "1";
-  };
-  if ($("#CampusNewsAlerts").is(':selected')){
-      CampusNewsAlerts = "1";
-  };
-  if ($("#AreaNewsAlerts").is(':selected')){
-      AreaNewsAlerts = "1";
-  };
-  if ($("#SchoolClosureAlerts").is(':selected')){
-      SchoolClosureAlerts = "1";
-  };
+  //verify values
+  if (AlertType === "EmergencyAlerts") {
+    EmergencyAlerts = "1";
+  }
+  if (AlertType === "CampusNewsAlerts") {
+    CampusNewsAlerts = "1";
+  }
+  if (AlertType === "AreaNewsAlerts") {
+    AreaNewsAlerts = "1";
+  }
+  if (AlertType === "SchoolClosureAlerts") {
+    SchoolClosureAlerts = "1";
+  }
 
   // Create new variable/object to be later posted to api
 
@@ -48,7 +36,6 @@ $("#finalRegistrationSubmit").click(function(event) {
     AreaNewsAlerts: AreaNewsAlerts,
     SchoolClosureAlerts: SchoolClosureAlerts,
   };
-
   // Post variable/object to API to save to database
 
   $.post("/api/newSubscriber", newSubscriber)
