@@ -11,28 +11,28 @@ $("#finalRegistrationSubmit").click(function(event) {
 
   //verify if boxes are checked
 
-  if ($("#Parent").is(':checked')){
+  if ($("#Parent").is(':selected')){
       Relationship = "Parent";
   };
-  if ($("#LegalGuardian").is(':checked')) {
+  if ($("#LegalGuardian").is(':selected')) {
       Relationship = "LegalGuardian";
   };
-  if ($("#Student").is(':checked')){
+  if ($("#Student").is(':selected')){
       Relationship = "Student";
   };
-  if ($("#Other").is(':checked')){
+  if ($("#Other").is(':selected')){
       Relationship = "Other";
   };
-  if ($("#EmergencyAlerts").is(':checked')){
+  if ($("#EmergencyAlerts").is(':selected')){
       EmergencyAlerts = "1";
   };
-  if ($("#CampusNewsAlerts").is(':checked')){
+  if ($("#CampusNewsAlerts").is(':selected')){
       CampusNewsAlerts = "1";
   };
-  if ($("#AreaNewsAlerts").is(':checked')){
+  if ($("#AreaNewsAlerts").is(':selected')){
       AreaNewsAlerts = "1";
   };
-  if ($("#SchoolClosureAlerts").is(':checked')){
+  if ($("#SchoolClosureAlerts").is(':selected')){
       SchoolClosureAlerts = "1";
   };
 
@@ -48,8 +48,6 @@ $("#finalRegistrationSubmit").click(function(event) {
     AreaNewsAlerts: AreaNewsAlerts,
     SchoolClosureAlerts: SchoolClosureAlerts,
   };
-
-  console.log(EmergencyAlerts);
 
   // Post variable/object to API to save to database
 
