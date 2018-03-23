@@ -48,7 +48,6 @@ $("#finalRegistrationSubmit").click(function(event) {
     AreaNewsAlerts: AreaNewsAlerts,
     SchoolClosureAlerts: SchoolClosureAlerts,
   };
-
   // Post variable/object to API to save to database
 
   $.post("/api/newSubscriber", newSubscriber)
