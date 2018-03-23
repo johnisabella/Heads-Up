@@ -3,26 +3,38 @@ $("#finalRegistrationSubmit").click(function(event) {
 
   //variables to hold initial data
 
-  Relationship = (document.getElementById("RelationshiptoStudent").value);
-  AlertType = (document.getElementById("AlertFormControlSelect").value);
+  Relationship = "";
   EmergencyAlerts = "0";
   CampusNewsAlerts = "0";
   AreaNewsAlerts = "0";
   SchoolClosureAlerts = "0";
 
-  //verify values
-  if (AlertType === "EmergencyAlerts") {
-    EmergencyAlerts = "1";
-  }
-  if (AlertType === "CampusNewsAlerts") {
-    CampusNewsAlerts = "1";
-  }
-  if (AlertType === "AreaNewsAlerts") {
-    AreaNewsAlerts = "1";
-  }
-  if (AlertType === "SchoolClosureAlerts") {
-    SchoolClosureAlerts = "1";
-  }
+  //verify if boxes are checked
+
+  if ($("#Parent").is(':checked')){
+      Relationship = "Parent";
+  };
+  if ($("#LegalGuardian").is(':checked')) {
+      Relationship = "LegalGuardian";
+  };
+  if ($("#Student").is(':checked')){
+      Relationship = "Student";
+  };
+  if ($("#Other").is(':checked')){
+      Relationship = "Other";
+  };
+  if ($("#EmergencyAlerts").is(':checked')){
+      EmergencyAlerts = "1";
+  };
+  if ($("#CampusNewsAlerts").is(':checked')){
+      CampusNewsAlerts = "1";
+  };
+  if ($("#AreaNewsAlerts").is(':checked')){
+      AreaNewsAlerts = "1";
+  };
+  if ($("#SchoolClosureAlerts").is(':checked')){
+      SchoolClosureAlerts = "1";
+  };
 
   // Create new variable/object to be later posted to api
 
