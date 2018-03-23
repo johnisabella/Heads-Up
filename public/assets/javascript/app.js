@@ -49,6 +49,8 @@ $("#finalRegistrationSubmit").click(function(event) {
     SchoolClosureAlerts: SchoolClosureAlerts,
   };
 
+  console.log(EmergencyAlerts);
+
   // Post variable/object to API to save to database
 
   $.post("/api/newSubscriber", newSubscriber)
